@@ -1,0 +1,130 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	position: relative;
+}
+.content {
+	flex:1 0 auto;
+}
+.footer {
+	flex:0 0 auto;
+}
+#body {text-align:center;}
+
+#logotype {
+	float: left;
+	margin-left: 1%;
+}
+#phoneNumber {
+	color: #FF6400;
+	font-family: 'Calibri Light';
+	font-size: 220%;
+	margin: 1% 1% 0 0;	
+}
+#headline {
+	color: #FF6400;
+	font-family: 'Calibri Light';
+	font-size: 250%;
+	margin: 2% 0 7% 22%;
+}
+.topBar {
+	background-color: #FF6400;
+	overflow: hidden;
+	margin: 0 1% 0 1%
+}
+.topBar a {
+    float: left;
+	margin: 0 1px 0 1px;
+    background-color: #2E2E2E;
+	color: white;
+	padding: 1.4% 4.783%;
+	text-align: center;
+	text-decoration: none;
+	font-size: 120%;
+	font-family: 'Calibri';
+}
+.topBar a:hover {
+	background-color: #FF6400;
+}
+.topBar a.selected {
+	background-color: #FF6400;
+}
+ul.breadcrumb {
+	padding: 10px 16px;
+	list-style: none;
+	margin-left: 3%;
+	font-family: 'Calibri Light';
+}
+ul.breadcrumb li {
+	display: inline;
+}
+ul.breadcrumb li+li:before{
+	padding: 0.2%;
+	color: black;
+	content: "-";
+	font-size: 160%;
+}
+ul.breadcrumb li a {
+		color: #2E2E2E;
+}
+.calculator {
+	background-color: #F2F2F2;
+	margin: 0 50% 8.5% 4%;
+}
+.calculatorMenu p {
+	padding-right: 40%;
+	font-family: 'Calibri Light';
+	postion: fixed;
+}
+select {
+	width: 23%;
+	cursor: pointer;
+}
+#radio input {
+	cursor: pointer;
+}
+#slider {
+	margin-left:30%;
+}
+.thumb {
+	width: 10px;
+	height: 10px;
+	border-radius: 3px;
+	position: relative;
+	left: 10%;
+	top: -5px;
+	background: lime;
+	cursor: pointer;
+}
+.footBar {
+	background-color: #2E2E2E;
+	overflow: hidden;
+	margin: 0 1% 0 1%;
+}
+.footBar a {
+    float: left;
+    background-color: #2E2E2E;
+	color: white;
+	padding: 2% 0% 2% 4%;
+	font-size: 110%;
+	font-family: 'Calibri Light';
+}
+
+
+
+
+
+
+
+
+

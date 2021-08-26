@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>World Bank Calculator</title>
+		<link href="style.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+	<div class="wrapper">
+		<div class="content">
+		<img src="https://1000logos.net/wp-content/uploads/2020/04/Logo-The-World-Bank.jpg" height="150px" id="logotype">
+		<p id="phoneNumber" align="right">
+			8-800-100-5005⠀</br>
+			+7(3452)522-000
+		</p></br></br></br>
+		<div class="topBar">
+			<a href="#">Кредитные карты</a>
+			<a href="#"  class="selected">Вклады</a>
+			<a href="#">Дебетовая карта</a>
+			<a href="#">Страхование</a>
+			<a href="#">Друзья</a>
+			<a href="#">Интернет-банк</a>
+			
+		</div>
+		<ul class="breadcrumb">
+			<li><a href="#">Главная</a></li>
+			<li><a href="#">Вклады</a></li>
+			<li>Калькулятор</li>
+		</ul>
+		</div>
+		<div class="calculator">
+			<h1 id="headline">Калькулятор</h1>
+			<div class="calculatorMenu" align="right">
+				<p>Дата оформления вклада⠀⠀⠀<input placeholder="дд.мм.гггг" size="10"></p></br>
+				<p>Сумма вклада⠀⠀⠀<input min="1000" max="3000000" placeholder="10 000" size="10"></p></br>
+				<p id="badString">Срок вклада⠀⠀⠀
+					<select>
+						<option>1 год</option>
+						<option>2 года</option>
+						<option>3 года</option>
+						<option>4 года</option>
+						<option>5 лет</option>
+					</select>
+				</p></br>
+				<p id="radio">Пополнение вклада⠀⠀⠀<input type="radio" name="deposit" checked>Нет⠀⠀⠀<input type="radio" name="deposit">Да</p></br>
+				<p>Сумма пополнения вклада⠀⠀⠀<input size="10" min="1000" max="3000000"></p></br>
+				<p>Результат:⠀⠀⠀</p></br>
+			</div>
+			<div id="slider" class="slider">
+				<div class="thumb"></div>
+			</div>
+			<script>
+				let thumb = slider.querySelector('.thumb');
+				
+				thumb.onmousedown = function(event){
+					event.preventDefault();
+					
+					let shiftX = event.clientX - thumb.getBoundingClientRect().left;
+					
+					document.addEventListener('mousemove', onMouseMove);
+					document.addEventListener('mouseup', onMouseUp);
+					
+					function onMouseMove(event) {
+						let newLeft = event.clientX - shiftX - slider.getBoundingClientRect().
+							left;
+						
+						if (newLeft < 0) {
+							newLeft = 0;
+						}
+						let rightEdge = slider.offsetWidth - thumb.offsetWidth;
+						if (newLeft > rightEdge) {
+							newLeft = rightEdge;
+						}
+						
+						thumb.style.left = newLeft + 'px';
+					}
+					
+					function onMouseUp() {
+						document.removeEventListener('mouseup', onMouseUp);
+						document.removeEventListener('mousemove', onMouseMove);
+					}
+				};
+				
+				thumb.ondragstart = function() {
+					return false;
+				}
+			</script>
+		</div>
+		<div class="footer">
+		<footer>
+		  <div class="footBar">
+			<a href="#">Кредитные карты</a>
+			<a href="#">Вклады</a>
+			<a href="#">Дебетовая карта</a>
+			<a href="#">Страхование</a>
+			<a href="#">Друзья</a>
+			<a href="#">Интернет-банк</a>
+		</div>
+		</footer>
+		</div>
+	</div>
+	</body>
+</html>
