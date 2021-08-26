@@ -1,0 +1,21 @@
+a{
+	color: green;
+	font-size: 20px;
+}
+a:hover{
+	color: lime;
+}
+
+div{
+	color: yellow;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	background-color: #E4E4E4;
+	border: 1px solid black;
+}
+div:hover{
+	color: orange;
+}
+
+.joke {
+	color: blue;
+}
